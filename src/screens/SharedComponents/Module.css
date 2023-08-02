@@ -1,0 +1,51 @@
+.cardstyle
+{
+    width: 100%;
+    text-align: right;
+    border-style: none;
+    box-shadow: none;
+}
+
+.imgtitle
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section_2_header 
+{
+    text-align: center;
+    color: #F29F05;
+}
+
+.section_2_items
+{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.div__items_Section_2
+{
+    border-radius: 12px;
+    border: 3px solid #F29F05;
+
+}
+
+.submit_button
+{
+    background-color: #F29F05;
+    color:#fff;
+}
+.submit_button:hover {
+    background-color: #fff; /* Green */
+    color: #F29F05 !important;
+    border-color: #F29F05 !important;
+  }
+

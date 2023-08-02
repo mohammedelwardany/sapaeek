@@ -1,5 +1,15 @@
 import React, { useState } from 'react';
-import { Avatar, Button, Modal } from 'antd';
+import { Avatar, Button, Modal , Card ,Row, Col } from 'antd';
+import'./Module.css'
+
+const gridStyle = {
+  width: '100%',
+  textAlign: 'right',
+  boxShadow:'none'
+  
+};
+
+
 const CircleImgModal = () => {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
@@ -38,30 +48,143 @@ src={<img src={require("../../assets/homeScreen/Vedioscreen.png")} alt="avatar" 
         open={open}
         title="Title"
         onOk={handleOk}
-        onCancel={handleCancel}
+
         footer={[
-          <Button key="back" onClick={handleCancel}>
-            Return
-          </Button>,
-          <Button key="submit" type="primary" loading={loading} onClick={handleOk}>
-            Submit
-          </Button>,
-          <Button
-            key="link"
-            href="https://google.com"
-            type="primary"
-            loading={loading}
-            onClick={handleOk}
-          >
-            Search on Google
-          </Button>,
-        ]}
+
+          <Button key="submit" className='submit_button'   loading={loading} onClick={handleOk}>
+            الحصول على الخدمه
+          </Button>
+        
+        ]} 
       >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
+
+<Card>
+ 
+  <Card.Grid hoverable={false} style={gridStyle}><h4 style={{color:'#F29F05'}}>خدمات برمجة المواقع</h4>
+
+<Row gutter={16}>
+
+<Col span={12}>
+        <div className='imgtitle'><img src={require('../../assets/homeScreen/Rectangle 10.png')} style={{width:'100%' }}/></div>
+      </Col>
+      <Col span={12}>
+        <div><p>
+  يمكنك صناعة موقعك الخاص
+بكل ما تريد من خدمات
+مواقع تسويقية
+مواقع تجارة الكترونيه
+مواقع شركات
+مواقع تعريفيه
+مواقع ادارية
+ويمكنك ايضا ادارة موقعك من
+خلال داش بورد والتحكم به
+  
+  </p></div>
+      </Col>
+      
+    </Row>
+  </Card.Grid>
+
+
+    <Card.Grid hoverable={false} style={gridStyle}><h4 className='section_2_header'>من اعمالنا</h4>
+    <Row className='section_2_items' gutter={16}>
+      <Col span={8}>
+        <div className='div__items_Section_2'>
+          <div className='section_2_items'>
+          <img src={require('../../assets/homeScreen/Rectangle 17.png')} style={{width:'100%' }}/>
+          </div>
+          <p>          اسم الموقع
+</p>  
+          
+          
+          </div>
+      </Col>
+      <Col span={8}>
+        <div className='div__items_Section_2'>
+          <div className='section_2_items'>
+          <img src={require('../../assets/homeScreen/Rectangle 17.png')} style={{width:'100%' }}/>
+          </div>
+<p>          اسم الموقع
+</p>          
+          
+          </div>
+      </Col>
+      <Col span={8}>
+        <div className='div__items_Section_2'>
+          <div className='section_2_items'>
+          <img src={require('../../assets/homeScreen/Rectangle 17.png')} style={{width:'100%' }}/>
+          </div>
+          <p>          اسم الموقع
+</p>  
+          
+          
+          </div>
+      </Col>
+    </Row>
+    
+    
+    </Card.Grid>
+    <Card.Grid hoverable={false} style={gridStyle}>
+    <h4 className='section_2_header'>من عملائنا</h4>
+    <Row className='section_2_items' gutter={16}>
+      <Col span={6}>
+        <div >
+          <div className='section_2_items'>
+          <img src={require('../../assets/homeScreen/Ellipse 6.png')} style={{width:'100%' }}/>
+          </div>
+          <p>          اسم الشركه
+</p>
+          
+          
+          </div>
+      </Col>
+      <Col span={6}>
+        <div >
+          <div className='section_2_items'>
+          <img src={require('../../assets/homeScreen/Ellipse 6.png')} style={{width:'100%' }}/>
+          </div>
+          <p>          اسم الشركه
+</p>        
+          
+          </div>
+      </Col>
+      <Col span={6}>
+        <div >
+          <div className='section_2_items'>
+          <img src={require('../../assets/homeScreen/Ellipse 6.png')} style={{width:'100%' }}/>
+          </div>
+          <p>          اسم الشركه
+</p>  
+          
+          
+          </div>
+      </Col>
+
+
+      <Col span={6}>
+        <div >
+          <div className='section_2_items'>
+          <img src={require('../../assets/homeScreen/Ellipse 6.png')} style={{width:'100%' }}/>
+          </div>
+          <p>          اسم الشركه 
+</p>  
+          
+          
+          </div>
+      </Col>
+    </Row>
+
+
+
+
+
+
+    </Card.Grid>
+   
+
+    
+ 
+  </Card>
       </Modal>
     </>
   );
