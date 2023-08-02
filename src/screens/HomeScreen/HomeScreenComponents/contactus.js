@@ -13,7 +13,7 @@ return(
     <br/><br/><br/><br/>
     <h2 className="m-0 font text-center">يمكنك التواصل معنا عبر الهاتف</h2>
     <br/>
-    <h2 className="m-0 font text-center">+965 9913 1995</h2>
+    <h2 className="m-0 font text-center directionnonAr">+965 9913 1995</h2>
     <br/><br/><br/>
     <h2 className="m-0 font text-center">يمكنك التواصل معنا عبر البريد الالكتروني</h2>
     <div className="App-header lil-size">
