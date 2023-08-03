@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Avatar, Button, Modal , Card ,Row, Col } from 'antd';
-import'./Module.css'
 
 const gridStyle = {
   width: '100%',
