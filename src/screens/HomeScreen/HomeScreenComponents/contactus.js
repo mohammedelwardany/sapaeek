@@ -8,7 +8,7 @@ const ContactUs = () => {
       };
 return(
     <>
-    <div> 
+    <div id="contactus"> 
     <h1 className="m-0 font headTitle">تواصل معنا</h1> 
     <br/><br/><br/><br/>
     <h2 className="m-0 font text-center">يمكنك التواصل معنا عبر الهاتف</h2>

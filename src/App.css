@@ -96,17 +96,35 @@ font-size: 6vh;
   align-items: center;
   justify-content: center;
 }
+.flex-row-center{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .flex-col-start{
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
 }
+.flex-row-start{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
 .flex-col-end{
   display: flex;
   flex-direction: column;
   align-items: end;
   justify-content: center;
+}
+.flex-row-end{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
 }
 .lil-size{
   min-height: 70vh !important;
@@ -145,6 +163,9 @@ font-size: 6vh;
 .mt-25{
   margin-top: 25px;
 }
+.mb-30{
+  margin-bottom: 30px;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -172,12 +193,39 @@ font-size: 6vh;
   .w-80-responsive{
     width: 80% !important;
   }
+  .icon-inside{
+    /* color: #000; */
+    font-size: 20vh !important;
+    
+  }
+
+  .normal-text{
+    font-size: 2vh;
+    line-height: 3vh;
+    text-align: center;
+  }
+  .normal-normal-text{
+    text-align: center;
+    font-size: 2vh !important;
+    line-height: 4vh !important;
+    
+  }
+  /* .bold-text{
+    font-size: 2.5vh;
+    font-weight: bold;
+  } */
+  .bold-bold-text{
+    text-align: center;
+    font-size: 2.5vh !important;
+    font-weight: bold;
+  }
   
 }
 
 .normal-text{
   font-size: 2vh;
   line-height: 3vh;
+  margin: 10px;
 }
 .normal-normal-text{
   font-size: 2.5vh;
@@ -291,6 +339,9 @@ width: 100%;
 {
     background-color: #F29F05;
     color:#fff;
+    height: fit-content;
+    width: fit-content;
+    padding-inline: 6vh;
 }
 .submit_button:hover {
     background-color: #fff; /* Green */
@@ -298,3 +349,38 @@ width: 100%;
     border-color: #F29F05 !important;
   }
 
+.iconSet{
+  color: #fff;
+  font-size: 10vh;
+  text-align: center;
+}
+ 
+.icon-inside{
+  color: #000;
+  font-size: 40vh;
+  
+}
+
+
+a{
+  color: #fff;
+}
+  /* unvisited link */
+a:link {
+  color: #fff;
+}
+
+/* visited link */
+a:visited {
+  color: #fff;
+}
+
+/* mouse over link */
+a:hover {
+  color: #F28705;
+}
+
+/* selected link */
+a:active {
+  color: #F2CB04;
+}

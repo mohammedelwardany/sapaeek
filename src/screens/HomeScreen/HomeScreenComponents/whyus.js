@@ -4,7 +4,7 @@ import CircleImgModal from "../../SharedComponents/circleImageModal";
 const WhyUs = () => {
   return (
     <>
-      <div>
+      <div id="whyus">
         <h1 className=" font headTitle">لماذا سبائك</h1>
         <p className="m-0 font text-center">تابع معنا الفيديو</p>
         <div className="App-header lil-size">
@@ -30,21 +30,22 @@ const WhyUs = () => {
     <p className=" font bold-text">لشركة سبائك مميزات كثيرة</p>
 
         <ul className="normal-text font m-0">
-            <li>الميزة الاولي</li>
-            <li>الميزة الاولي</li>
-            <li>الميزة الاولي</li>
-            <li>الميزة الاولي</li>
-            <li>الميزة الاولي</li>
+            <li>خبراء متخصصين</li>
+            <li>سرعة التنفيذ</li>
+            <li>اسعار مناسبه لا تقبل المنافسه</li>
+            <li>المساعده في نجاح مشروعك</li>
+            <li>افكار رائعه</li>
+            <li>جودة المنتج</li>
         </ul>
 <br/><br/>
-<p className="font bold-text">كما يمكنك الاستفاده بـ</p>
+{/* <p className="font bold-text">كما يمكنك الاستفاده بـ</p>
         <ul className="normal-text font m-0" >
             <li>الميزة الاولي</li>
             <li>الميزة الاولي</li>
             <li>الميزة الاولي</li>
             <li>الميزة الاولي</li>
             <li>الميزة الاولي</li>
-        </ul>
+        </ul> */}
     </Col>
 </Row>
       </div>

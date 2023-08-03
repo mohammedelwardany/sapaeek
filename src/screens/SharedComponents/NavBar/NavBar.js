@@ -14,9 +14,20 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 const drawerWidth = 240;
-const navItems = ['خدماتنا', 'لماذا سبائك', 'من نحن','تواصل معنا'];
+const navItems = [{name:'خدماتنا',id:"services"},  {name:'لماذا سبائك',id:"whyus"}, {name:'من نحن',id:"whoUs"},{name:'تواصل معنا',id:"contactus"}];
+
+const scrollToElement = (id) => {
+  scroll.scrollTo(document.getElementById(id).offsetTop, {
+    duration: 500,
+    delay: 0,
+    smooth: 'easeInOutQuart'
+  });
+};
+
+
 
 function NavBar(props) {
   const { window } = props;
@@ -28,14 +39,14 @@ function NavBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <img src={require("../../../assets/homeScreen/logo.png")} className='logoNav'/>
+            <img src={require("../../../assets/homeScreen/logo.png")} className='logoNav' onClick={() => scrollToElement("topHeader")}/>
 
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText className='font' primary={item} />
+            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToElement(item.id)}>
+              <ListItemText className='font' primary={item.name} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -46,9 +57,9 @@ function NavBar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex'}}>
       <CssBaseline />
-      <AppBar  component="nav" className='directionAr px-20 navbar'>
+      <AppBar component="nav" className='directionAr px-20 navbar'>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -64,13 +75,13 @@ function NavBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            <img src={require("../../../assets/homeScreen/logo.png")} className='logoNav'/>
+            <img src={require("../../../assets/homeScreen/logo.png")} className='logoNav' onClick={() => scrollToElement("topHeader")}/>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' ,marginInline:"20px" }} >
+              <Button key={item} sx={{ color: '#fff' ,marginInline:"20px" }} onClick={() => scrollToElement(item.id)}>
                 <p className='font'>
-                {item}
+                {item.name}
 
                 </p>
               </Button>
